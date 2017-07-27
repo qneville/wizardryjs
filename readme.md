@@ -52,7 +52,6 @@ Set up the magic. Options are optional, but your form won't do much if the Finis
 
 ```js
 <script>
-
 	/* Optional options */
 	var options = {
 		finish_action: function(){},   // Function callback after clicking "Finish"
