@@ -2,7 +2,7 @@
 A simple and extendible jQuery wizard manager for forms.
 
 
-#HTML Setup#
+# HTML Setup #
 HTML setup involves the .form-wizard class among a few other things. Just follow this template.
 
 ```html
@@ -38,16 +38,18 @@ HTML setup involves the .form-wizard class among a few other things. Just follow
 ```
 
 
-#JS Setup#
+# JS Setup #
 
-##Include the script##
+## Include the script ##
+
 Make sure to include wizardry.js after you've included jQuery
 
 ```html
 <script src="./js/vendor/wizardry.js"></script>
 ```
 
-##Hook it all up##
+## Hook it all up ##
+
 Set up the magic. Options are optional, but your form won't do much if the Finish action isn't hooked up.
 
 ```js
@@ -68,5 +70,6 @@ Set up the magic. Options are optional, but your form won't do much if the Finis
 
 # Examples #
 
-##Submitting the form##
+## Submitting the form ##
+
 Soon to come
