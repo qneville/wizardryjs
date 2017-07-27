@@ -1,2 +1,2 @@
 # Wizardry.js #
-A simple and extendible wizard manager for forms.
+A simple and extendible jQuery wizard manager for forms.
