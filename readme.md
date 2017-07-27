@@ -39,36 +39,35 @@ HTML setup involves the .form-wizard class among a few other things. Just follow
 
 
 #JS Setup#
+
+##Include the script##
 Make sure to include wizardry.js after you've included jQuery
 
 ```html
 <script src="./js/vendor/wizardry.js"></script>
 ```
 
-Hook it all up
+##Hook it all up##
+Set up the magic. Options are optional, but your form won't do much if the Finish action isn't hooked up.
 
 ```js
 <script>
-	$( ".form-wizard" ).wizardry({
-		finish_action: function(){
-			// Generate templates for githook tutorial.
-			console.log(get_inputs())
-			
-			set_up_templates();
-			
-		},
-		restart_action: function() {
-			// Clear cookies
-			$('.wizard-input').each(function() {
-				$(this).val('');
-			});
-			$.removeCookie('wizard_inputs');
-		},
-		next_action: function() {
-			// Update cookie
-			$.cookie('wizard_inputs', JSON.stringify(get_inputs()))
-		},
-		answers: JSON.parse($.cookie('wizard_inputs'))
-	});
+
+	/* Optional options */
+	var options = {
+		finish_action: function(){},   // Function callback after clicking "Finish"
+		restart_action: function(){},  // Function callback after clicking "Start Over"
+		next_action: function(){},     // Function callback after clicking 'Next' button
+		start_step: 1,				   // Start at index (1 is first)
+		answers: ['answer1','answer2'] // Following indexes of input, populate 
+	};
+
+	/* Initialize the wizard */
+	$( ".form-wizard" ).wizardry(options);
 </script>
 ```
+
+# Examples #
+
+##Submitting the form##
+Soon to come
